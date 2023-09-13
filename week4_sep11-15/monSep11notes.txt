@@ -1,0 +1,60 @@
+Interfaces tutorial due today
+Testing tutorial due Tuesday (want .NET /.NET Core)
+
+
+Milestone 3 due Friday
+- add testing library for data classes
+- should have a separate test class for each data class
+    - test default values for all non-derived mutable properties
+        (any bool values, Count)
+
+    - test any bounds for properties
+        Count
+
+    - test each derived property
+        SpecialInstructions, CaloriesPerEach, CaloriesTotal,
+        Price
+
+
+Example: what tests are needed for Breadsticks?
+
+- defaults? Count (8), Cheese (false)
+
+    what kind of test? Fact
+    what do we assert?
+        create a Breadsticks instance
+        assert Count is 8, Cheese is false
+
+
+- bounds? Count
+    allowable range 4-12
+    what kind of test? Theory
+        inputs: good value, bad value
+        create a Breadsticks instance
+        set its Count to the good value
+        try to change to Count to the bad value
+        Assert Breadsticks Count still equals good value
+
+
+- derived properties? (one property per test)
+    which ones? CaloriesPerEach, CaloriesTotal, Price, 
+        SpecialInstructions
+
+    what kind of tests? Theory
+
+    CaloriesPerEach test
+        bool isCheese
+        count
+        last parameter: the expected value
+
+    create a Breadsticks
+    set its parameters
+    assert that its CaloriesPerEach equals the expected value
+
+    SpecialInstructions
+    expected value: new string[]{"blah", "blah"}
+
+    all contained in SpecialInstructions
+
+    assert that Count() of SpecialInstructions equals expected value
+        length

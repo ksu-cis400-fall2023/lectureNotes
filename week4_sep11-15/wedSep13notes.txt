@@ -1,0 +1,19 @@
+Milestone 3 due Friday
+    - Add testing project
+    - Test class for every data class
+    - For each data class, test:
+        - default values (Fact)
+        - Count property bounds (Theory)
+        - derived property values (Theory)
+
+
+On any Theory test, be sure to check edge cases
+    - Count edge cases? - just below, just above
+    - Derived property edge cases?
+        SpecialInstructions in particular - hold all toppings
+            hold no toppings
+
+SpecialInstructions
+
+
+Next week

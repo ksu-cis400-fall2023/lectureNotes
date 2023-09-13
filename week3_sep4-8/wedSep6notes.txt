@@ -1,0 +1,47 @@
+public int Amount 
+{
+    get 
+    {
+        return Amount;
+    }
+    set
+    {
+        Amount = value;
+    }
+}
+
+
+Methods and documentation tutorials due yesterday
+
+Milestone 2 due Friday
+- add enums (Crust, Size, WingSauce, SodaFlavor)
+- add three new menu items (IcedTea, Soda, Wings)
+- refactor all pizza classes to have size and crust
+- lower bound for Count properties
+- fix inconsistencies
+- documentation
+
+
+--> handling Count (enforce a lower bound of 4)
+
+
+
+--> getting enum info in special instructions
+
+list.Add(CrustType);
+
+
+--> Pizza calories
+
+thin crust has calorie base of 150, original is 250,
+    deep dish is 300.
+
+small is 75% the calories of medium (incl toppings),
+    large is 130% the calories of medium (incl toppings)
+
+--> how to find calories per each
+
+--> what to do with return type
+
+
+Next week.

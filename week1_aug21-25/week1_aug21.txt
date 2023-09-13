@@ -1,0 +1,135 @@
+CIS 400: Object-oriented design, development, and testing
+
+Julie Thornton
+
+
+-----------------------------------------------------------
+
+What will we learn? 
+    Creating and maintaining a large software project
+
+1) Object-oriented development principles
+2) Desktop development using WPF, data binding, and custom events 
+3) Web development using ASP.NET, web forms, and LINQ
+
+Throughout course: writing unit tests, creating UML diagrams
+
+
+
+
+
+
+
+-----------------------------------------------------------
+
+Course structure - hybrid.
+
+- Module of work each week:
+    - reading (do first)
+    - maybe, a quiz or 2 (not graded, but recommended!)
+    - 1-2 video tutorials (will start next week - due Mon/Tues)
+    - new milestone for the semester-long project (due Fri)
+
+    - this week is a little different
+
+
+What will we do during class time?
+
+
+
+
+----------------------------------------------------------
+
+Software needed.
+
+- Visual Studio 2022 (disable IntelliCode) and Visio
+
+
+- How to get free versions of both?
+
+
+- Mac users
+
+
+
+
+- Lab machines
+
+
+
+
+----------------------------------------------------------
+
+Graded work.
+
+Midterm exams (2):      20%
+Final exam:             15%
+Milestones (about 12):  45%
+Activities (tutorials and pretest): 20%
+
+
+Grading scale: 90/80/70/60
+
+
+Borderline grades.
+
+
+
+
+
+
+
+-----------------------------------------------------------
+
+Class policies.
+
+- Late work
+
+
+
+- Dropped assignments/exams
+
+
+
+- Incomplete
+
+
+
+- Collaboration
+
+
+
+- Getting help
+
+    --> Helping hand extra credit
+
+-----------------------------------------------------------
+
+Course materials.
+
+- Canvas (see syllabus and modules)
+
+
+- Online textbook
+
+
+
+
+--> See any typos? Bug bounty.
+
+
+
+
+
+
+------------------------------------------------------------
+
+THIS week:
+    - Pretest during class on Wednesday (why?)
+    - Milestone 0 due Fri (AFTER reading assignment / quiz)
+        - practice milestone process (git, create release)
+        - PLUS, post on Discord
+
+
+
+Milestone 0.

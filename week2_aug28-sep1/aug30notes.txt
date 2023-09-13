@@ -1,0 +1,54 @@
+Encapsulation and Properties tutorials should be done
+    (can still complete for the late penalty)
+
+Milestone 1 due Friday
+
+Making 6 new data classes for menu items
+    (are we repeating a lot of code?)
+
+
+
+
+
+See starter SupremePizza class
+    - different ways of declaring properties
+    - different way of creating object (in SpecialInstructions)
+
+Count property - enforcing an upper bound
+    will want a private backing field
+
+    private uint _count;
+
+
+--> documentation is not required for MS 1 (but will be for MS 2)
+
+--> before submitting, double-check:
+    - that you have all the new classes
+    - that you have the correct properties in each class
+    - that your spelling/capitalization of classes, properties,
+        and string literals matches the writeup
+    - that you are bounding each Count property
+    - that each relevant item has the correct starting count
+
+/////////////////////////////
+
+Where are we going next?
+    Static methods vs instance methods
+    Enumerations
+    Documentation
+
+Week 3 module will be available on Friday
+    - background reading
+    - methods tutorial (due Tuesday, September 5)
+    - documentation tutorial (due Tuesday, September 5)
+    - documentation practice quiz
+    - Milestone 2 (due Friday, September 8)
+    --> no class or office hours on Monday, September 4
+
+Milestone 2 will involves:
+    - adding several enumerations (crust type, size, etc.)
+    - adding three new menu items
+    - refactoring the pizza classes to add the crust type
+        and size information
+    - adding all documentation
+
