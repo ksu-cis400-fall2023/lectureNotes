@@ -1,21 +1,32 @@
 Inheritance tutorial: due today
 UML tutorial: due Tuesday
 
-Purpose of an interface? Define properties/methods that must go in a class
+Purpose of an interface? to define a set of properties and methods
+    that can be enforced on classes
 
-Purpose of an abstract class?
-
-How do we override a method/property?
-    parent: virtual or abstract
-    child: override
+Purpose of an abstract class? to define a type where some methods/properties
+    are fully implemented but others are not (and are declared abstract).
+    Any non-abstract child class must provide an implementation for those
+    abstract members.
 
 What do we have to do when we implement an interface?
+    For each property/method defined in the interface, we must
+    either provide an implementation or declare it as abstract
 
 What do we have to do when we extend an abstract class?
+    nothing...but if we don't provide an implementation for all
+    abstract properties/methods from the parent class, then we must
+    declare ourselves as an abstract class as well
 
-Can we implement more than one interface?
+How do we override a method/property?
+    virtual in parent (or abstract, if not implemented yet)
+    override in child 
 
-Can we extend more than one abstract class?
+Can we implement more than one interface? yes!
+    We must provide an implementation (or declare as abstract)
+    every property/method from every interface we are implementing
+
+Can we extend more than one abstract class? no
 
 
 Milestone 4: due Friday
