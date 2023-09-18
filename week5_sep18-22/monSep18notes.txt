@@ -1,0 +1,30 @@
+Inheritance tutorial: due today
+UML tutorial: due Tuesday
+
+Milestone 4: due Friday
+    - IMenuItem (change Soda, IcedTea to have CaloriesPerEach, CaloriesTotal)
+    - Topping enum/PizzaTopping class
+    - General Pizza class implements IMenuItem
+        - List of possible PizzaToppings
+        (add all as possible, default to not on pizza)
+        - General way to get calories 
+    - Specialty pizzas extend Pizza
+        - Add their topping to possible list, default to ON pizza
+        - Don't need calories properties any more
+        - Override as needed
+    - Drink, Side are abstract, implement IMenuItem
+        - Collect together shared info from drinks and sides
+        - Make all drinks extend Drink, all side extend Side
+    - Order class implements ICollection<IMenuItem>
+        - Allows you to add items to an Order
+        - Calculates subtotal, tax, total
+    - Create UML diagram
+    - Update old tests for changes, add Pizza and Order tests
+
+--> you will probably want a way to get/check/update pizza toppings
+--> UML can get messy - divide into sections, repeating if necessary
+
+
+--> Exam 1 is next Wednesday, September 27
+    --> we will review on Monday, September 25
+    --> no tutorials or Milestone next week
