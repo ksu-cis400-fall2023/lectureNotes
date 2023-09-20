@@ -1,0 +1,39 @@
+Milestone 4: due Friday
+    - IMenuItem (change Soda, IcedTea to have CaloriesPerEach, CaloriesTotal)
+    - Topping enum/PizzaTopping class
+    - General Pizza class implements IMenuItem
+        - List of possible PizzaToppings
+        (add all as possible, default to not on pizza)
+        - General way to get calories 
+    - Specialty pizzas extend Pizza
+        - Add their topping to possible list, default to ON pizza
+        - Don't need calories properties any more, or any bool properties
+        - Override as needed
+
+    --> where to set the PizzaToppings for each type?
+    --> what happens in a child constructor?
+        need to clear PossibleToppings in all specialty pizza constructors
+
+    - Drink, Side are abstract, implement IMenuItem
+        - Collect together shared info from drinks and sides
+        - Make all drinks extend Drink, all side extend Side
+
+    --> How can SpecialInstructions for Soda access the Size?
+
+    - Order class implements ICollection<IMenuItem>
+        - Add, Remove, Contains, enumerators
+        - Allows you to add items to an Order
+        - Calculates subtotal, tax, total
+    - Create UML diagram (can use draw.io instead of Visio if you want)
+    - Update old tests for changes, add Pizza and Order tests
+        --> you'll want to test that the #possible toppings is correct
+            for each pizza type
+
+--> you will probably want a way to get/check/update pizza toppings
+--> UML can get messy - divide into sections, repeating if necessary
+
+
+--> Exam 1 is next Wednesday, September 27
+    --> will be a mix of vocab / conceptual topics, plus some implementation
+    --> we will review on Monday, September 25
+    --> no tutorials or Milestone next week
