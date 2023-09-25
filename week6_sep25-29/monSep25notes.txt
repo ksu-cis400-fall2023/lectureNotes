@@ -1,0 +1,120 @@
+Exam 1 is Wednesday, September 27 during class
+
+On paper, closed notes/computers
+
+No tutorials or milestone this week
+    (we'll start on the GUI with WPF next week)
+
+
+Structure:
+- 5-10 multiple choice questions relating to the vocab words + general concepts
+- 5ish problems that involve writing code or drawing/interpreting UML
+    (esp. relating to inheritance, interfaces, properties/fields, unit tests) 
+
+//////////////////
+
+Sample problems.
+
+What is the purpose of interfaces?
+
+Do we have to implement every method defined in an interface?
+
+What is the purpose of inheritance?
+
+What does "protected" mean on a field?
+
+What does "abstract" mean on a class?
+
+What does it mean to override a method?
+
+/////////////
+
+public class Cookie
+{
+    public virtual string Kind {get;} = "A cookie";
+}
+
+public class SugarCookie : Cookie
+{
+    public override string Kind {get;} = "A sugar cookie";
+}
+
+public class FrostedCookie : SugarCookie
+{
+    public uint Calories {get;} = 150u;
+}
+
+
+List<Cookie> cookies = new List<Cookie>();
+cookies.Add(new Cookie());
+cookies.Add(new SugarCookie());
+cookies.Add(new FrostedCookie());
+
+foreach (Cookie c in cookies) {
+    Console.WriteLine($"Type: {C.Kind}");
+}
+
+--> what prints?
+
+
+--> pretend we have more cookies in our list.
+--> how would we print the total calories in all
+--> the frosted cookies?
+
+
+//////////////
+
+Draw a UML diagram for the above
+
+What if Cookie was an interface?
+
+What if Cookie was an abstract class 
+    (and Kind was abstract)?
+
+//////////////
+
+public interface IStoreItem
+{
+    decimal BasePrice { get; }
+    decimal FinalPrice { get; }
+}
+
+
+Write the class DiscountItem that implements IStoreItem.
+
+-> include DiscountPercentage property with get/set, starts at 0, max is 50% off
+
+-> include Threshold property with get/set, starts at 0
+    (defines min base price before applying discount)
+
+////////////////
+
+[Fact]
+public void DefaultDiscountAndThresholdCheck()
+{ 
+    //FILL IN HERE
+}
+
+
+[Theory]
+[InlineData(-0.01)]
+[InlineData(0.51)]
+[InlineData(1)]
+public void InvalidDiscountNotAllowed(decimal discount)
+{ 
+    //FILL IN HERE!
+}
+
+
+[Theory] 
+//FILL IN HERE!
+
+public void FinalPriceIsCorrect(decimal basePrice, decimal discount, decimal finalPrice)
+{
+    DiscountItem item = new DiscountItem();
+    item.BasePrice = basePrice;
+    item.DiscountPercentage = discount;
+
+    Assert.Equal(finalPrice, item.FinalPrice);
+}
+
