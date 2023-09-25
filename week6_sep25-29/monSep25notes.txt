@@ -16,16 +16,35 @@ Structure:
 Sample problems.
 
 What is the purpose of interfaces?
+    to enforce implementation of properties and methods
+    on types that implement an interface
+
 
 Do we have to implement every method defined in an interface?
+    must list every method or property from the interface
+    don't have to provide implementation details - could
+        list as abstract (and then the class would be abstract)
+
 
 What is the purpose of inheritance?
+    provide a common set of features for multiple elements 
+    of that type
 
 What does "protected" mean on a field?
+    accessible inside the class and inside any child class
 
+    
 What does "abstract" mean on a class?
+    can't instantiate an object of that type
+    probably will have child classes that DO implement
+        the abstract methods or properties
+
 
 What does it mean to override a method?
+    parent class: define as virtual or abstract
+    child class: define with override
+    use when the child wants to define its own behavior
+    instead of using the parent implementation
 
 /////////////
 
@@ -51,64 +70,113 @@ cookies.Add(new SugarCookie());
 cookies.Add(new FrostedCookie());
 
 foreach (Cookie c in cookies) {
-    Console.WriteLine($"Type: {C.Kind}");
+    Console.WriteLine($"Type: {c.Kind}");
 }
 
 --> what prints?
+Type: A cookie
+Type: A sugar cookie
+Type: A sugar cookie
 
 
 --> pretend we have more cookies in our list.
 --> how would we print the total calories in all
 --> the frosted cookies?
 
+uint total = 0u;
+foreach (Cookie c in cookies)
+{
+    if (c is FrostedCookie f) {
+
+        total += f.Calories;
+    }
+}
+
+
+
 
 //////////////
 
-Draw a UML diagram for the above
+Draw a UML diagram for the above (see Cookie UML)
 
 What if Cookie was an interface?
+    <<interface>>
 
 What if Cookie was an abstract class 
     (and Kind was abstract)?
+    italics (can use <i></i> or something like that on exam)
 
 //////////////
 
 public interface IStoreItem
 {
-    decimal BasePrice { get; }
+    decimal BasePrice { get; set; }
     decimal FinalPrice { get; }
 }
 
 
 Write the class DiscountItem that implements IStoreItem.
 
--> include DiscountPercentage property with get/set, starts at 0, max is 50% off
+public class DiscountItem : IStoreItem {
+    public decimal BasePrice { get; set; }
 
--> include Threshold property with get/set, starts at 0
-    (defines min base price before applying discount)
+    public decimal FinalPrice
+    {
+        get {
+            return BasePrice - BasePrice*DiscountPercentage;
+        }
+    }
+
+    private decimal _discount = 0m;
+    public decimal DiscountPercentage 
+    {
+        get => _discount;
+        set
+        {
+            if (value >= 0 && value <= 0.50) {
+                _discount = value;
+            }
+        }
+    }
+}
+
+
+-> include DiscountPercentage property with get/set, starts at 0, max is 50% off,
+shouldn't be negative
+
+-> FinalPrice calculated from base price and discount
+
+
 
 ////////////////
 
 [Fact]
-public void DefaultDiscountAndThresholdCheck()
+public void DefaultDiscountCheck()
 { 
     //FILL IN HERE
+    DiscountItem d = new DiscountItem();
+    Assert.Equal(0m, d.DiscountPercentage);
 }
 
 
 [Theory]
-[InlineData(-0.01)]
 [InlineData(0.51)]
 [InlineData(1)]
+[InlineData(-0.01)]
 public void InvalidDiscountNotAllowed(decimal discount)
 { 
     //FILL IN HERE!
+    DiscountItem item = new DiscountItem();
+    item.DiscountPercentage = discount;
+    Assert.Equal(0m, item.DiscountPercentage);
 }
 
 
 [Theory] 
 //FILL IN HERE!
-
+[InlineData(20.00, 0.50, 10.00)]
+[InlineData(10.00, 0.00, 10.00)]
+[InlineData(10.00, 0.25, 7.50)]
 public void FinalPriceIsCorrect(decimal basePrice, decimal discount, decimal finalPrice)
 {
     DiscountItem item = new DiscountItem();
