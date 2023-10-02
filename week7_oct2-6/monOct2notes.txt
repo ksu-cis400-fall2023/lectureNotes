@@ -1,0 +1,42 @@
+Exam 1 discussion.
+
+Across both sections:
+
+High: 99/100
+Average: 83/100
+
+A (90-100): 27 students
+B (80-89): 27 students
+C (70-79): 7 students
+Below C: 5 students
+
+Discuss some problems.
+
+/////////////////////////////
+
+This week:
+- WPF tutorial (build a GUI, edit controls)
+- Resources and styles tutorial (add customization to all controls of a certain type
+    -- kind of like CSS)
+
+- Milestone 5:
+    - Write shell of GUI for the "point of sale" for the Pizza Parlor
+    - Clicking menu items should add them to the order display
+
+Look at sample GUI picture.
+    - do you have to match it exactly?
+    - what kind of layout for the menu?
+    - what kind of layout for the order?
+
+Review: what is DataContext? How does it work?
+
+Order control should contain a ListView
+    - what should our DataContext be?
+    - where should we set it?
+
+
+--> some functionality will be missing for now.
+    - Order subtotal/total/tax being correctly displayed
+    - Being able to edit menu items
+    - Displaying more information about items than just the name
+    - Back to Menu / Cancel Order / Complete Order buttons
