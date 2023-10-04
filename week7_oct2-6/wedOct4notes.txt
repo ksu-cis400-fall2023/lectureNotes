@@ -1,0 +1,38 @@
+- Milestone 5:
+    - Write shell of GUI for the "point of sale" for the Pizza Parlor
+    - Clicking menu items should add them to the order display
+
+Look at sample GUI picture.
+    - do you have to match it exactly?
+    - what kind of layout for the menu?
+    - what kind of layout for the order?
+
+Review: what is DataContext? How does it work?
+
+Order control should contain a ListView
+    - what should our DataContext be?
+    - where should we set it?
+
+
+--> some functionality will be missing for now.
+    - Order subtotal/total/tax being correctly displayed
+    - Being able to edit menu items
+    - Displaying more information about items than just the name
+    - Back to Menu / Cancel Order / Complete Order buttons
+
+
+Common questions:
+- How to add lines around different controls and layouts?
+- What to include on the UML for PointOfSale?
+    (how to add namespaces to PointOfSale?)
+- Error that InitializeComponent can't be found
+
+
+What is the goal with our GUI development?
+- Again, practice with a bigger project
+- Shows that program LOGIC (i.e., the model) should NEVER be mixed with the GUI
+- Build bigger components out of smaller components (modularization)
+- Idea of data binding comes up in different web and mobile development frameworks
+- Practice laying out controls with a markup language
+- although we won't spend much time on it, lends itself to MVVM architecture
+    that is common in web and mobile development
