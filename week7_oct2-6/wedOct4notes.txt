@@ -23,16 +23,8 @@ Order control should contain a ListView
 
 Common questions:
 - How to add lines around different controls and layouts?
+- How to add project references?
+- Using height/width
+- What to have for the number, date, total, subtotal, tax
 - What to include on the UML for PointOfSale?
     (how to add namespaces to PointOfSale?)
-- Error that InitializeComponent can't be found
-
-
-What is the goal with our GUI development?
-- Again, practice with a bigger project
-- Shows that program LOGIC (i.e., the model) should NEVER be mixed with the GUI
-- Build bigger components out of smaller components (modularization)
-- Idea of data binding comes up in different web and mobile development frameworks
-- Practice laying out controls with a markup language
-- although we won't spend much time on it, lends itself to MVVM architecture
-    that is common in web and mobile development
