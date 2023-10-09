@@ -1,0 +1,48 @@
+This week: data binding
+
+What is it?
+
+Tutorial: data binding 1 (due today)
+
+    --> involves implementing INotifyCollectionChanged on ShoppingListItems
+        why?
+        what is the process?
+
+Tutorial: data binding 2 (due tomorrow)
+
+    --> involves implementing INotifyPropertyChanged on ShoppingListItems
+        AND LineItem
+
+        why?
+        what is the process?
+
+
+--> In general, when to implement INotifyCollectionChanged?
+    -> when to invoke the CollectionChanged event?
+
+--> When to implement INotifyPropertyChanged?
+    -> when to invoke the PropertyChanged event?
+
+
+Milestone 6, due Friday:
+    - What was our old DataContext?
+    - What would make more sense as our DataContext?
+        --> what does that mean we need to do?
+    
+
+
+    - Make Order implement INotifyCollectionChanged (why?)
+    - Make Order implement INotifyPropertyChanged
+        - which properties do we care about?
+        - when do they change?
+        - what about individual menu items?
+    
+    --> what should the finished milestone look like?
+
+    - also, update UML (show that you are implementing those interfaces)
+        --> show the DataContext as an association 
+
+    - make sure PropertyChanged event is invoked as necessary
+        --> including the times that changing a property changes a DERIVED property
+
+    - you don't have to test the CollectionChanged event
