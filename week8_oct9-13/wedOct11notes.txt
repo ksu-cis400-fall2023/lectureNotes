@@ -1,0 +1,36 @@
+Milestone 6, due Friday:
+
+    - Make Order implement INotifyCollectionChanged (why?)
+        ** error in data binding tutorial -
+            Remove should remove item, invoke event when 
+            index > -1 (when the item is really there), NOT when index == -1
+
+    - Make Order implement INotifyPropertyChanged
+        - which properties do we care about?
+            Subtotal, Total, Tax, TaxRate
+
+        - when do they change?
+            Subtotal, Total, Tax all change when add/remove/clear
+            TaxRate has a set - would impact Tax, Total, TaxRate
+
+        - what about individual menu items?
+    
+    --> what should the finished milestone look like?
+
+    --> give a tax rate (9.15%)
+    --> Date: can either show as just the date or (preferably) the date and time
+
+    Can do something like this to format Text:
+        Text="{Binding Path=PlacedAt, StringFormat='Date: {0}'}"
+
+    Similarly for a price:
+        Text="{Binding Path=Subtotal, StringFormat='Subtotal: {0:C}'}"
+
+    - also, update UML (show that you are implementing those interfaces)
+        --> show the DataContext as an association 
+
+    - you don't have to test the CollectionChanged event
+
+    - done early? implement INotifyPropertyChanged for each menu item
+
+    - testing Order Number
