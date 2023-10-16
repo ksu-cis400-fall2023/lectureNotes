@@ -1,0 +1,46 @@
+Today: custom events and switching displays
+Tuesday: custom controls and displaying enums
+
+
+Milestone 7: due Friday, October 20
+- create controls for customizing menu items
+- for each menu item, be able to customize all aspects
+- exception: don't need to customize pizza toppings yet
+- how many pizza controls? just need one
+
+- use custom count control (like tutorial)
+- load enum values as resources
+
+--> show sample customization control
+
+- customization control should appear after you click to order an item
+- need a way to pick an item in the order and edit it again
+- need to program Back to Menu button
+
+--> recommend placing all customization controls on the main window in the same 
+    location as the menu selection control. Set visibility to hidden.
+
+--> on button click, what should happen? How to pass information? 
+
+    make menu control have an event
+
+    in main window, you can attach an event handler to that event
+
+    in menu control click event, do something like:
+        MyCustomEvent?.Invoke(....)
+        make your custom event args contain that new menu item object
+
+        main window event handler will know which customization control 
+        to display
+
+        set DataContext of that customization control to that menu item
+
+
+--> possible issue: Count property name (rename to SideCount)
+
+
+--> recommended order of approach:
+    pick Wings 
+    get it totally working first
+
+
