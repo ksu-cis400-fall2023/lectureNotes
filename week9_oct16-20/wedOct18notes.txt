@@ -1,0 +1,41 @@
+Milestone 7: due Friday, October 20
+- create controls for customizing menu items
+- for each menu item, be able to customize all aspects
+- exception: don't need to customize pizza toppings yet
+
+- customization should open when you click a menu item
+
+- should be a way to edit other items in the order
+
+--> use a custom event to go from a button click in the menu to the
+    customization screen
+
+
+--> see example
+
+
+Custom event steps in MS7:
+1) Make a custom event args class that extends RoutedEventArgs. It should
+    contain the info needed about the event. (What is needed? IMenuItem)
+
+2) Declare an event with your custom args in the class where the action will happen
+    (where is this? in the menu selection code-behind)
+
+3) Invoke your event (with the info in a new custom args) when the action happens
+    (when would this be? How to get the info? menu selection's click event
+    create the custom args from the menu item you're already creating there)
+
+4) In the class where you want to make something happen, write an event handler 
+    method that takes a sender and a custom args. Do whatever is needed.
+    (where should the event handler be? what should it do?)
+    Main window. want: figure out which customization control (look at
+    the menu item). Whichever it is, make it visible and make the menu selection
+    hidden. Set the DataContext of the customization control to be the menu item.
+
+5) In the same class as #4, attach your event handler to the event in #2
+    (where to do this?)
+    add the event handler in the main window constructor
+
+
+--> UML: show DataContext for each customization control
+--> testing: test PropertyChanged for all menu items
