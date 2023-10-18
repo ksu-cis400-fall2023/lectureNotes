@@ -22,7 +22,7 @@ namespace EventExample
     {
         //declare a custom event
         //public event EventHandler<CustomArgType> EventName;
-        public event EventHandler<ColorEventArgs> ColorClicked;
+        public event EventHandler<ColorEventArgs> ColorEvent;
 
         //will need custom args
 
@@ -48,7 +48,8 @@ namespace EventExample
                     info = "blue";
                 }
                 //invoke your event
-                ColorClicked?.Invoke(this, new ColorEventArgs(info));
+                ColorEvent?.Invoke(this, new ColorEventArgs(info));
+
             }
         }
     }

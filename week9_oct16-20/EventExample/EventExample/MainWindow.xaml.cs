@@ -25,15 +25,14 @@ namespace EventExample
             InitializeComponent();
 
             //"MyControl" is the name of my ColorControl object
+            MyControl.ColorEvent += HandleColorChange;
 
             //need to subscribe to MyControl's custom event
-            MyControl.ColorClicked += OnColorClick;
         }
 
         //want: a method that executes when I click a ColorControl button
         //ColorText is the name of the text block to put the color name
-
-        private void OnColorClick(object? sender, ColorEventArgs e)
+        private void HandleColorChange(object? sender, ColorEventArgs e)
         {
             ColorText.Text = e.ColorValue;
         }
