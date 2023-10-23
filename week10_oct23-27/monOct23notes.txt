@@ -1,0 +1,40 @@
+Monday: MVVM tutorial
+    Purpose of MVVM?
+
+
+Tuesday: Programmatic controls tutorial
+
+Exam 2: Wed Nov 1
+
+///////////////////////
+
+Milestone 8: due Fri Oct 27
+- last WPF milestone (will start Razor pages after Exam 2)
+- allow pizza topping customizations (do we need more than one pizza control now?)
+    --> how to show the correct topping options for a pizza? 
+    --> where do we need to invoke PropertyChanged?  from PizzaTopping
+    --> how to make sure that a change in topping affects the pizza?
+        for all pizza toppings, attach an event handler
+
+    in Pizza constructor, attach event handler to all the PizzaToppings
+
+- implement cancel order button (what should the new DataContext be?)
+    could make DataContext be a new order
+    or, Clear the Order 
+
+- implement complete order button
+
+
+Payment screen (has a corresponding ViewModel, will be its DataContext):
+- lists order cost (subtotal, tax, total)
+- allows input for amount paid (defaults to total, can't go below total)
+- uses data binding to display change (will update as the amount paid is modified)
+- print receipt 
+
+
+Recommendations:
+- do pizza customizations first
+- then do cancel order button
+- then write ViewModel for payment screen (what will it need to implement?)
+- then design payment screen with data binding to the ViewModel
+- then finish complete order process
