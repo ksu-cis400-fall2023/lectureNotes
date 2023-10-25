@@ -1,0 +1,38 @@
+Tutorials for the week:
+    MVVM (what is the purpose?)
+    Programmatic controls
+
+Exam 2: Wednesday, November 1 during class
+
+--> I'll post more info by the end of the week
+--> no tutorials or milestone next week
+--> we will review Monday, October 30 during class
+
+Quick question: what is your experience with HTML and CSS?
+
+///////////////////////
+
+Milestone 8: due Fri Oct 27
+- last WPF milestone (will start Razor pages after Exam 2)
+- allow pizza topping customizations (still just one pizza control)
+- add mechanic to remove an item from the order
+- implement cancel order button 
+
+- implement complete order button
+
+Payment screen (has a corresponding ViewModel, will be its DataContext):
+- lists order cost (subtotal, tax, total)
+- allows input for amount paid (defaults to total, can't go below total)
+- uses data binding to display change (will update as the amount paid is modified)
+- print receipt 
+
+
+--> behavior if removing an item while payment screen is showing
+
+
+Testing?
+- changing a PizzaTopping should invoke a change in several Pizza properties
+
+UML?
+- show PizzaTopping implements INotifyPropertyChanged
+- Add payment control and view model, plus necessary associations
