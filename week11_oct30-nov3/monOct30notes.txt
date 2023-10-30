@@ -1,0 +1,28 @@
+Exam 2: Wednesday, November 1. 
+
+Paper-based, closed-notes, and closed-computers
+50 minutes in length
+
+Topics:
+
+**Being able to draw a control by looking at XAML
+**Being able to define the XAML for a basic control
+Common WPF elements -- Grid, StackPanel, DockPanel, TextBlock, TextBox, 
+    Button, CheckBox, ComboBox
+Partial classes, including XAML and the code-behind
+Composition of WPF controls
+The elements tree
+DataContext
+Data binding
+**INotifyPropertyChanged and INotifyCollectionChanged, including how and when to 
+    invoke PropertyChanged
+**Events, including custom events, custom event arguments, invoking events, 
+    attaching event handlers to events, and using events to send messages between objects
+MVVM (the ideas)
+Testing the PropertyChanged event
+ 
+
+Mix of multiple choice and "open-ended"
+
+
+--> work practice problems
