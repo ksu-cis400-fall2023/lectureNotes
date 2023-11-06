@@ -1,0 +1,65 @@
+Exam 2.
+High: 98/100
+Average: 82/100
+
+A (90-100): 33 students
+B (80-89): 14 students
+C (70-79): 3 students
+D/F (below 70): 12 students
+
+Quickly see solution
+
+////////////////
+
+Begin Razor pages.
+- inject C# code into HTML to create dynamic web pages
+- will need to add new ASP.NET Core project
+    (might need to choose "install more tools and features"
+    when adding new project and then search for ASP bundle)
+
+Tutorial 1 : Intro to Razor Pages (due today)
+    - create a new ASP.NET Core project, review HTML and CSS,
+        see PageModels
+
+Tutorial 2: More with Razor Pages (due Tuesday)
+    - read in JSON of movie info, display on a webpage
+    - more with styling elements
+
+//////////////////////
+
+Milestone 9: due Friday, November 10
+- Create a website for the Pizza Parlor
+- About page, Privacy page
+- Home page displays ALL menu options, sectioned by
+    Pizzas/Sides/Drinks
+
+- For each menu item, create an instance for all possible combinations of that item
+    EXCEPT: Count, pizza toppings, Ice
+
+- Example: Supreme pizza. What combinations?
+    Size - 3
+    Crust - 3
+
+- Example: Soda. What combinations?
+    size -3
+    flavor - 5
+
+
+Display for each item:
+    - Name
+    - Special instructions
+    - Price
+    - Calories (per each)
+
+
+user should be able to click to go to Pizzas, Sides, Drinks
+
+
+--> feel free to style however you want! Feel free to look online for CSS example
+
+
+--> if you don't like the look of all the menu combinations
+- next week we'll be adding search/filters to our menu
+- it will be easier if you have a menu with all those combinations
+... BUT next week you are welcome to change how things are displayed on the page
+
