@@ -34,7 +34,7 @@ UML:
     - add each .cshtml.cs file (basically, each PageModel)
     - show inheritance info
     - what new association for website?
-        Index has a Menu
+        Index should be associated with Menu
     - what is new in Data? add Menu
 
 Testing: the Data class
