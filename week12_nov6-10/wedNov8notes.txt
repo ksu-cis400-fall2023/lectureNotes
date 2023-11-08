@@ -1,0 +1,46 @@
+Tutorial 1 : Intro to Razor Pages (due today)
+    - create a new ASP.NET Core project, review HTML and CSS,
+        see PageModels
+
+Tutorial 2: More with Razor Pages (due Tuesday)
+    - read in JSON of movie info, display on a webpage
+    - more with styling elements
+
+//////////////////////
+
+Milestone 9: due Friday, November 10
+- Create a website for the Pizza Parlor
+- About page, Privacy page
+- Home page displays ALL menu options, sectioned by
+    Pizzas/Sides/Drinks
+
+- For each menu item, create an instance for all possible combinations of that item
+    EXCEPT: Count, pizza toppings, Ice
+
+- Display for each item:
+    - Name
+    - Special instructions
+    - Price
+    - Calories (per each)
+
+user should be able to click to go to Pizzas, Sides, Drinks
+
+
+--> style however you want!
+...next week you are welcome to change how things are displayed on the page
+
+
+UML: 
+    - add each .cshtml.cs file (basically, each PageModel)
+    - show inheritance info
+    - what new association for website?
+        Index has a Menu
+    - what is new in Data? add Menu
+
+Testing: the Data class
+    - make sure Pizza/Sides/Drinks/FullMenu have the correct number of items
+        AND the correct combinations
+
+        is there a hawaiian pizza with crust "crust" and size "size"
+
+        Assert.Contains(Menu.Pizza, item => item is HawaiianPizza && (item as HawaiianPizza).PizzaCrust == crust ...);
