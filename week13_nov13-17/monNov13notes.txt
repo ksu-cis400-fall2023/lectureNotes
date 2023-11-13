@@ -1,0 +1,38 @@
+Tutorial 1 (due today)
+- filter movie DB by name, MPAA rating, Genre, IMDB/Rotten Tomatoes ratings
+- first part is recorded, follow linked instructions to complete remaining filters
+- takes a little longer, but is really similar to the milestone
+
+--> can bind an HTML input to a property in the PageModel
+--> or, can update OnGet to take parameters whose names/types match the 
+    form input elements
+
+
+Tutorial 2 (due Tuesday)
+- update filters to be LINQ queries
+
+
+//suppose items is an IEnumerable<SomeType
+IEnumerable<SomeType> keep = items.Where(item => (some condition about item));
+
+
+Or could write:
+IEnumerable<SomeType> keep = from item in items 
+                        where (some condition about item)
+                        select item;
+
+
+
+///////////////
+
+MS 10: due Friday
+
+- add filters by keyword, calories, price
+
+
+What is upcoming:
+- After break, will see POST requests, more with JSON, cloud workspaces,
+    and web APIs
+- Just one more milestone (#11) after this week
+- (optional) website competition
+- final exam
