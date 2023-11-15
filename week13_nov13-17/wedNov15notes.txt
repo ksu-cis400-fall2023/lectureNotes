@@ -1,0 +1,32 @@
+MS 10: due Friday
+
+- add filters by keyword, calories, price
+- testing
+    - check null values
+    - what are some special case numerical values?
+        min/max are the same
+        min is bigger than the max
+        biggest possible uint
+    - make sure each filter returns expected results
+        might hardcode a small menu to search
+        apply filter
+        see if the items you expect are in the result
+
+        try to cover cases like: one search term, multiple search terms,
+            mix the order of search terms, mixed case
+
+
+What is upcoming:
+- Next module (Week 14) will be available the Friday of fall break (Nov 24)
+    - two tutorials
+        - POST requests
+        - working with JSON
+    - cloud workspaces
+    - Milestone 11 -- the last milestone
+    (I will be unavailable by email/Discord over fall break)
+
+- All late work must be submitted by Friday, December 1
+
+- Optional website competition: will announce after break
+    - winner gets a Radina's giftcard and bragging rights
+    - can do whatever you want with your website
