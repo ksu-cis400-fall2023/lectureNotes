@@ -1,0 +1,47 @@
+General announcements:
+- NO late work accepted after Friday, December 1 (includes milestones and tutorials)
+- Milestone 11 must be checked off in class or office hours (not Canvas)
+- Week 15 will have one more tutorial plus a review for the final exam
+- I'll post information about the website competition soon
+
+
+
+Tutorial 1: POST requests and JSON (due today)
+    - use POST requests for more security, to send more info, 
+        when changing underlying data
+    - can use JSON to simulate an external database
+    - deserialize from JSON into objects when your application starts
+    - serialize objects to JSON when a change is made
+    - (in practice, you would use an external database for a web application)
+
+Tutorial 2: Cloud workspaces (due Tuesday)
+    - create Gitpod.io account
+        (really useful for group projects and to be able to work from 
+        multiple locations)
+    - link to movie databases repo
+    - with a few changes in settings, can launch app from Gitpod
+    - (while running, will be publicly available)
+
+
+Milestone 11 (due Friday, December 11)
+    - Add a reviews link to your website
+    - Should load previous reviews (sorted with newest on top)
+    - User can add new reviews
+    - All reviews are stored in JSON
+    - Host pizza parlor repo on Gitpod.io
+    - To "submit": demo in class or office hours
+        - show launching your web app from Gitpod
+        - show adding a couple of reviews (with newest on top)
+        - show closing web app, launching again - reviews should still be there
+
+For reviews:
+- Create a data class for each review (string Text, DateTime PlacedAt)
+- Create static ReviewDatabase class to load/add reviews
+- Deserialize JSON to a List of those reviews
+- When displaying reviews, will want to use OrderByDescending on the PlacedAt
+    property
+
+    see: https://textbooks.cs.ksu.edu/cis400/3-web-development/05-linq/04-linq-syntax/index.html
+
+--> you can have a Reviews property in your PageModel that gets the result
+    of a LINQ query that orders the ReviewDatabase reviews by PlacedAt
