@@ -1,0 +1,167 @@
+Web API tutorial - due tonight, can be turned in tomorrow for 10% off
+
+Website design competition - submit new release by Friday, 
+    winner gets Radina's gift card
+
+
+Final exam.
+    1:30 section - Tuesday, December 12 11:50 am - 1:40 pm (usual lab room)
+    2:30 section - Thursday, December 14 4:10-6:00 pm (usual lab room)
+
+Format.
+    Paper-based, closed notes, closed computers.
+    Multiple choice followed by open-ended.
+    Similar format as midterms
+
+--> be familiar with all vocabulary terms
+
+For open-ended:
+- Implementing a class, including fields/properties/methods/constructors
+- Writing and implementing an interface
+- Using inheritance and abstract classes
+    --> rules when extending a class? constructors?
+    --> rules when extending an abstract class?
+
+- Enforcing the range of a property
+- Creating and using objects
+- Drawing and interpreting UML diagrams
+- Determining if an object has a particular type and using casting operations
+- Writing Fact and Theory xUnit tests
+- Implementing and testing INotifyPropertyChanged
+- Events, including custom events, custom event arguments, invoking events, 
+    attaching event handlers to events, and using events to send messages 
+    between objects
+LINQ queries for filtering
+
+
+--> No questions on XAML, WPF, Razor Pages, CSS, HTML
+
+
+Vocab terms.
+
+Encapsulation --> example? bundling data and operations
+State
+Class
+Object
+Polymorphism --> example? Soda object
+    types? Soda, Drink, IMenuItem, object, INotifyPropertyChanged
+
+Type
+Type checking
+Casting
+Inheritance --> example? why?
+    avoids code duplication
+    general idea, to be done in more specific ways
+    Pizza was a general class (base class, super class)
+    SupremePizza was a child class (sub class, derived class)
+        common implementation: size, crust, calories, toppings
+        price was done differently
+            in parent: virtual
+            in child: override
+    constructors: base class constructor is called first
+        if parent class has a non-default constructor
+        child must do something to call that constructor
+            it will need a constructor, : base(params)
+
+Interfaces - require that classes have certain methods / properties
+Abstract classes --> how different from interfaces?
+    can only extend one class (includes abstract classes)
+    abstract classes can have finished properties/methods,
+        interfaces cannot
+
+    can implement multiple interfaces
+
+
+
+    --> extending an abstract class
+
+Events
+Data binding
+MVVM
+
+Field
+Method
+Property --> difference from field?
+    can have just a get, or just a set, or both (fields can't)
+    derived properties - calculated from other properties. Can't do this with a field.
+
+public
+protected --> can be seen inside this class and any descendent
+private
+static --> don't need an object
+    ClassName.memberName
+    static method can't access anything that is non-static in class
+
+Implicit casting --> when? the compiler can infer the new type
+    int x = 10;
+    double d = x; //implicit casting
+
+    int y = d; //would not compile
+
+    Soda s = new Soda();
+    IMenuItem item = s; //implicit casting
+
+    Soda another = item; // NO! would need explicit casting
+
+Explicit casting --> (type)
+    need to provide the type because we might be losing information
+
+    Soda another = (Soda) item; //if item is not a Soda, throws an exception
+
+    Soda s2 = item as Soda; //if item is not a Soda, s2 is null
+
+interface
+virtual --> places used? behavior?
+    when I might override that field/property/method in a child
+    allows that behavior
+
+    child would need to put the override keyword (but is not required if
+    they don't want the override behavior)
+
+abstract --> places used?
+    abstract class - can't create object of that type
+    properties/methods when I want this behavior in a child but don't want
+        to fully implement it yet
+
+override --> must be something declared virtual or abstract in the parent
+
+as - type casting
+
+
+is - type checking
+
+    if (item is Soda s) {
+
+    }
+    //will just be false if item isn't a Soda
+
+
+enum --> know how to declare, use
+
+public interface IInterface {
+    void Method1(params);
+}
+
+public abstract class AbstractClass {
+    public void FinishedMethod() {
+        Console.WriteLine("is done");
+    }
+
+    public abstract void AbstractMethod(params);
+}
+
+public class ChildClass : AbstractClass, IInterface {
+    public override void AbstractMethod(params) {
+        Console.WriteLine("code");
+    }
+
+    public void Method1(params) {
+        Console.WriteLine("done");
+    }
+}
+
+
+
+
+ChildClass c = new ChildClass();
+c.FinishedMethod(); //is ok
